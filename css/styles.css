@@ -1,0 +1,186 @@
+/* || Web Fonts */
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v2/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/sourceserifpro/v11/neIQzD-0qpwxpaWvjeD0X88SAOeauXo-oBOL.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  /* || Base Styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Serif Pro', serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    background-color: #F6F5F3;
+}
+h1 {
+    padding: .6em 0;
+    background-color: #2D3945;
+    color: #FFF;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+}
+h2 {
+    margin: 0.5em 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+#body-container {
+    padding: 1em;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+section {
+    padding: 2em 0;
+    border-bottom: 4px solid #000;
+    margin-bottom: 2px;
+    text-align: center;
+}
+section p {
+    opacity: 60%;
+}
+
+/* || Form - Contant Information Styles */
+
+.contact-info {
+    border-top: 2px solid #000;
+    padding: 1em 0 1.5em;
+}
+fieldset {
+    border: none;
+    padding: 0;
+}
+.contact-info legend {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#icon-1::before {
+    content: url(../img/contacts.svg);          /* Icon before Contact Information Legend */
+    margin-right: 10px;
+}
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    padding: .5em 0;
+}
+.form-contact label {
+    padding: 0.9em 0;
+}
+.form-contact input,
+.form-contact select,
+.form-checkbox textarea {
+    width: 100%;
+    padding: 1.2em;
+    border: 0.1em solid #F6F5F3;
+    border-radius: 5px;
+    background-color:#EFF0F1;
+    color: #ADB2B7;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 0.2em solid #46698b;
+    background-color: #FFF;
+    box-shadow: 0px 0px 8px #F6F5F3;
+    transition: all 0.2s ease-out;
+}
+input::placeholder {
+    color: #adb2b7;
+    text-align: right;
+    font-style: italic;
+}
+.zip input {
+    width: 50%;
+}
+
+/* || Form - Newsletter Styles */
+
+.form-newsletter {
+    padding: 0.5em 0;
+}
+#icon-2::before {
+    content: url(../img/newsletter.svg);          /* Icon before Newsletter Legend */
+    margin-right: 10px;
+}
+.form-newsletter label {
+    display: inline-block;
+    padding: 0 0 1em;
+}
+.form-checkbox label {
+    padding-left: 0.5em;
+}
+#btn {
+    width: 100%;
+    padding: 1em;
+    border: 0;
+    margin: 0.5em 0;
+    border-radius: 0.4em;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #4EBBB5; 
+}
+#btn:hover {
+    background-color: #2D3945;
+}
+
+/* || Footer Styles */
+
+footer {
+    padding: 2.5em 0 10em;
+    background-color: #2D3945;
+}
+footer p {
+    text-align: center;
+    font-style: italic;
+    color: #FFF;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+
+#body-container {
+      max-width: 650px;
+}
+
+.contact-info legend {
+    padding: 1em 0;
+}
+
+.form-contact {
+    flex-direction: row;
+}
+
+.form-contact label {
+    flex-basis: 25%;
+}
+
+.form-contact input,
+.form-contact select {
+    flex-basis: 75%;
+}
+
+.zip input {
+    flex-basis: 18.75%;
+}
+}
